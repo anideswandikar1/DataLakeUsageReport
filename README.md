@@ -5,7 +5,7 @@ For Azure Data Lake Gen1, the Azure Storage Exlorer was able to tell the size of
 
 # Prerequisites
 
-Azure Data Lake Gen2 Storage Account
+Azure Data Lake Gen2 Storage Account <br>
 Powershell
 
 # Input
@@ -18,6 +18,8 @@ Sample input file in in the code.
 The code will take each entry in the Input file, recursively traverse the path and calculate the total size of each location. The Output will be written to a csv file with two columns; Path, Size
 
 # Usage
+
+DataLakeUsageReportBuilder.ps1 contains the code. Run the script using the following format:
 
 DataLakeUsageReportBuilder.ps1 YourStorageAccountName ContainerName verbose (path...)\input.csv (path...)\output.csv
 
