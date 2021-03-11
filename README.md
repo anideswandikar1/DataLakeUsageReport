@@ -1,5 +1,10 @@
-# DataLakeUsageReport
+# Data Lake Usage Report
 Code/Utility to recursively traverse an Azure Data Lake Gen2 Insatnce and find the size of various Containers and Folders
+
+# Prerequisites
+
+Azure Data Lake Gen2 Storage Account
+Powershell
 
 # Input
 A CSV File listing all the Paths to be traversed. Depending on what you want to calculate and how your Data Lake is structured, you can provide a list of Root Level Folders Or go for Custom list of nested folders
