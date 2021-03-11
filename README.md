@@ -1,7 +1,7 @@
 # Data Lake Usage Report
 Code/Utility to recursively traverse an Azure Data Lake Gen2 Insatnce and find the size of various Containers and Folders.
 
-For Azure Data Lake Gen1, the Azure Storage Exlorer was able to tell the size of the folder by rifght-clicking and selecting the Folder Stats option. But with Azure Data Lake Gen2, this feature was taken away. While there might be solutions provided by the ADLS Product team in the future, this code can help solve any immediate requirements of finding sizes of Containers and folders.
+For Azure Data Lake Gen1, the Azure Storage Exlorer was able to tell the size of the folder by right-clicking and selecting the Folder Stats option. But with Azure Data Lake Gen2, this feature was taken away. While there might be solutions provided by the ADLS Product team in the future, this code can help solve any immediate requirements of finding sizes of Containers and folders.
 
 # Prerequisites
 
