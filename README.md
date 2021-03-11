@@ -19,7 +19,7 @@ The code will take each entry in the Input file, recursively traverse the path a
 
 # Usage
 
-"DataLakeUsageReportBuilder.ps1 (storage account name) <container name> <verbose/silent> <input csv file path> <output csv file path>"
+"DataLakeUsageReportBuilder.ps1 YourStorageAccountName ContainerName verbose (path...)\input.csv (path...)\output.csv
 Sample Input and Output files are included
 
 
