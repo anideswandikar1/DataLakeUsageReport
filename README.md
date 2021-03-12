@@ -5,6 +5,7 @@ For Azure Data Lake Gen1, the Azure Storage Exlorer was able to tell the size of
 
 # Prerequisites
 
+Azure Subscription
 Azure Data Lake Gen2 Storage Account <br>
 Powershell
 
