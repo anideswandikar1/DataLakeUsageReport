@@ -22,7 +22,7 @@ The code will take each entry in the Input file, recursively traverse the path a
 
 DataLakeUsageReportBuilder.ps1 contains the code. Run the script using the following format:
 
-DataLakeUsageReportBuilder.ps1 YourStorageAccountName ContainerName verbose (path...)\input.csv (path...)\output.csv
+<I> DataLakeUsageReportBuilder.ps1 YourStorageAccountName ContainerName verbose (path...)\input.csv (path...)\output.csv </I>
 
 Sample Input and Output files are included
 
