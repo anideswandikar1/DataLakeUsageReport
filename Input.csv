@@ -1,4 +1,4 @@
-Path
-/
-/Folder1
-/Folder2
+Container,Path
+files,/
+file,/Folder1
+files,/Folder2
