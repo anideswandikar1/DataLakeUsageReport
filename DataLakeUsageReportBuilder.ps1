@@ -1,14 +1,13 @@
-﻿  #Script takes five arguments
+  #Script takes five arguments
   # arg0 = Storage Account Name
   # arg1 =  Container Name
   # arg2 = verbose/silent verbose = print file names
   # arg3 = Input file path and file name
   # arg4 = Output file path and file name
   
-  $filesystemName = $args[1]
-  $Verbose = $args[2]
-  $inputfile = $args[3]
-  $outputfile = $args[4]
+  $Verbose = $args[1]
+  $inputfile = $args[2]
+  $outputfile = $args[3]
   
   #Get the Login context. You must run the Connect-AzAccount script before running this script
   $ctx = New-AzStorageContext -StorageAccountName $args[0] -UseConnectedAccount
@@ -22,7 +21,7 @@
   }
 
   # Add the output file headers
-  Add-Content -Path $outputfile  -Value 'Path,Size'
+  Add-Content -Path $outputfile  -Value 'Container,Path,Size'
 
   Write-Host "Reading File... "
     
@@ -34,7 +33,7 @@
       do
       {
         #Use Recurse and Continuation Token to read all the files
-        $gen2ChildItems = Get-AzDataLakeGen2ChildItem  -Context $ctx -FileSystem $filesystemName -Path $_.Path  -Recurse -FetchProperty -ContinuationToken $Token
+        $gen2ChildItems = Get-AzDataLakeGen2ChildItem  -Context $ctx -FileSystem $_.Container -Path $_.Path  -Recurse -FetchProperty -ContinuationToken $Token
         
         # loop through each child item and calculate the size by adding all the child file items
         
@@ -53,7 +52,7 @@
        While ($Token -ne $Null)
     
             # Write the results to the output file
-            $output = $_.Path + ',' + $totalSize
+            $output = $.Container + "," + $_.Path + ',' + $totalSize
             Add-Content -Path $outputfile  -Value $output
 
             if ($Verbose -eq 'verbose')
@@ -65,4 +64,3 @@
     }
 
 Write-Host "Done."
-
